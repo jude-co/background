@@ -7,6 +7,10 @@ body{
     font-family: Baloo;
 }
 
+h2{
+    font-family: 'Courier New', Courier, monospace;
+}
+
 .banner-text{
     width: 100%;
     position: absolute;
@@ -55,7 +59,7 @@ body{
     width: 25px;
     height: 25px;
     background: rgba(255, 255, 255, 0.2);
-    animation: animate 20s linear infinite;
+    animation: box 20s linear infinite;
     bottom: 150px;
     
 }
@@ -64,6 +68,7 @@ body{
     left: 86%;
     width: 80px;
     height: 80px;
+    background-color: crimson;
     animation-delay: 0s;
 }
 
@@ -94,6 +99,7 @@ body{
     left: 65%;
     width: 40px;
     height: 40px;
+    background-color: crimson;
     animation-delay: 0s;
 }
 
@@ -103,15 +109,39 @@ body{
     height: 110px;
     animation-delay: 3.5s;
 }
-@keyframes animate{
+@keyframes box{
     0%{
+        
         transform: translateY(0) rotate(0deg);
         opacity: 1;
     }
     100%{
+        background-color: blue;
         transform: translateY(-800px) rotate(360deg);
         opacity: 0;
     }
+}
+span::before{
+    content: '';
+    animation: animate infinite 8s;
+}
+@keyframes animate{
+    0%{
+        content: 'BLOG';
+    }
+    20%{
+        content: 'SITE';
+    }
+    40%{
+        content: 'DEVELOPER';
+    }
+    60%{
+        content: 'DESIGNER';
+    }
+    80%{
+        content: 'ANIMATOR';
+    }
+
 }
 
 
